@@ -5,7 +5,7 @@ def demander_texte(message) :
         nom = nom.strip()
         if nom == "" :
             nom_valide = False
-            print("Veuillez entre un nom de personnage correct")
+            print("Veuillez entrer un nom de personnage correct")
         else:
             nom_valide = True
     return nom
