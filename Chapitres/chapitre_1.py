@@ -10,10 +10,8 @@ def creer_personnage ():
     prenom = demander_texte ("Entrez le prénom de votre personnage : ")
     attributs = { "courage":0, "intelligence":0, "loyauté":0, "ambition":0}
     print ("Choisissez vos attributs : ")
-    min = 1
-    max = 10
-    for cle in attributs.keys():
-       attributs[cle] = demander_nombre("Niveau de {} (1-10) : ".format(cle) ,min,max )
+    for cle in attributs.keys ():
+       attributs[cle] = demander_nombre("Niveau de {} (1-10) : ".format(cle) ,1 ,10 )
     joueur = initialiser_personnage(nom,prenom,attributs)
     afficher_personnage(joueur)
     return joueur
