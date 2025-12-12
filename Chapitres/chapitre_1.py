@@ -1,18 +1,19 @@
 from univers.personnage import initialiser_personnage, afficher_personnage
-
+from utils.input_utils import demander_texte,demander_nombre
 
 def introduction():
     print ("BIENVENUE A L'ECOLE DES SORCIERS, QUE L'AVENTURE COMMENCE ! ")
     input()
 
 def creer_personnage ():
-    nom = input ("Entrez le nom de votre personnage : ")
-    prenom = input ("Entrez le prénom de votre personnage : ")
+    nom = demander_texte ("Entrez le nom de votre personnage : ")
+    prenom = demander_texte ("Entrez le prénom de votre personnage : ")
     attributs = { "courage":0, "intelligence":0, "loyauté":0, "ambition":0}
     print ("Choisissez vos attributs : ")
+    min = 1
+    max = 10
     for cle in attributs.keys():
-        while ( attributs[cle] < 1 or attributs[cle] >10) :
-              attributs[cle] = int (input("Niveau de {} (1-10) : ".format(cle)) )
+       attributs[cle] = demander_nombre("Niveau de {} (1-10) : ".format(cle) ,min,max )
     joueur = initialiser_personnage(nom,prenom,attributs)
     afficher_personnage(joueur)
     return joueur
@@ -24,11 +25,9 @@ def recevoir_lettre ():
     print("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?")
     print("1. Oui, bien sûr !")
     print("2. Non, je préfère rester avec l’oncle Vernon...")
-    choix = input("Votre choix : ")
-    while choix not in ("1", "2"):
-        print("Erreur : veuillez entrer 1 ou 2.")
-        choix = input("Votre choix : ")
-    choix = int(choix)
+    min = 1
+    max = 2
+    choix = demander_nombre("Votre choix : ",min,max)
     if choix == 2:
         print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie :")
         print("« EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! »")
@@ -44,11 +43,7 @@ def rencontrer_hagrid(personnage):
     print("Voulez-vous suivre Hagrid ?")
     print("1. Oui")
     print("2. Non")
-    choix = input("Votre choix : ")
-    while choix not in ("1", "2"):
-        print("Erreur : veuillez entrer 1 ou 2.")
-        choix = input("Votre choix : ")
-    choix = int(choix)
+    choix = demander_nombre("Votre choix : ",min_val:)
     if choix == 1:
         print("Vous acceptez de suivre Hagrid. Il sourit et vous dit :")
         print("'Bonne décision ! Le Chemin de Traverse t'attend.'")

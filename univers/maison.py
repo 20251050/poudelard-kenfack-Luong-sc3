@@ -1,3 +1,4 @@
+from utils.input_utils import demander_nombre,demander_choix
 def actualiser_points_maison(maisons,nom_maison,points):
     if nom_maison in maisons.keys() :
         maisons[nom_maison]+= points
@@ -25,16 +26,11 @@ def repartition_maison (joueur,questions) :
 
     for question,reponse,maison in questions :
         print ("")
-        print (question)
-        i = 1
-        for rep in reponse :
-            print (str(i)+". "+rep)
-            i = i+1
-        choix = int(input("Entrez un choix entre 1 et 4"))
-        print ("ton choix :",choix)
+        choix = demander_choix (question,reponse)
         c = choix - 1
         s = score.keys()
-        score[s[c]] += 3
+        i = s[c]
+        score[i] += 3
 
     print ("Résumé des scores : ")
     for a,b in score.items() :
