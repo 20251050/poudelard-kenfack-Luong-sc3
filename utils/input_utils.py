@@ -3,7 +3,7 @@ def demander_texte(message) :
     while nom_valide == False :
         nom = input(message)
         nom = nom.strip()
-        if nom == "" or nom == float:
+        if nom == "" :
             nom_valide = False
             print(message)
         else:
