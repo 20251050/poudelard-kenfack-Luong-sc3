@@ -9,15 +9,18 @@ def initialiser_personnage(nom,prenom,attributs):
     return D
 
 def afficher_personnage(joueur):
-    print ("profil du personnage : ")
-    print ("Nom : ",joueur["Nom"])
-    print ("Prenom :",joueur["Prenom"])
-    print ("Argent : ",joueur["Argent"])
-    print ("Inventaire : ",", ".join(str(x) for x in joueur["Inventaire"]))
-    print ("Sortilèges : ",", ".join(str(y) for y in joueur["Sortilèges"]))
-    print ("Attributs : ")
-    for (a,b) in joueur["Attributs"].items():
-        print(" -{} : {}".format(a,b))
+        print("Profil du personnage :")
+        for cle, valeur in joueur.items():
+            if type(valeur) == dict:
+                print(f"{cle} :")
+                for sous_cle, sous_valeur in valeur.items():
+                    print(f"- {sous_cle} : {sous_valeur}")
+            elif type(valeur) == list:
+                print(f"{cle} :")
+                if len(valeur) != 0:
+                    print(", ".join(str(element) for element in valeur))
+            else:
+                print(f"{cle} : {valeur}")
 
 def modifier_argent (joueur,montant) :
     joueur["Argent"] += montant

@@ -1,5 +1,5 @@
 from univers.personnage import initialiser_personnage, afficher_personnage
-from utils.input_utils import demander_texte,demander_nombre
+from utils.input_utils import demander_texte,demander_nombre,load_fichier
 
 def introduction():
     print ("BIENVENUE A L'ECOLE DES SORCIERS, QUE L'AVENTURE COMMENCE ! ")
@@ -23,9 +23,7 @@ def recevoir_lettre ():
     print("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?")
     print("1. Oui, bien sûr !")
     print("2. Non, je préfère rester avec l’oncle Vernon...")
-    min = 1
-    max = 2
-    choix = demander_nombre("Votre choix : ",min,max)
+    choix = demander_nombre("Votre choix : ",1,2)
     if choix == 2:
         print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie :")
         print("« EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! »")
@@ -41,7 +39,7 @@ def rencontrer_hagrid(personnage):
     print("Voulez-vous suivre Hagrid ?")
     print("1. Oui")
     print("2. Non")
-    choix = demander_nombre("Votre choix : ",min_val:)
+    choix = demander_nombre("Votre choix : ",1,2)
     if choix == 1:
         print("Vous acceptez de suivre Hagrid. Il sourit et vous dit :")
         print("'Bonne décision ! Le Chemin de Traverse t'attend.'")
@@ -49,11 +47,9 @@ def rencontrer_hagrid(personnage):
         print("Hagrid insiste gentiment et vous entraîne quand même avec lui!")
 
 
-import json
 
 def acheter_fournitures(personnage):
-    with open("data/inventaire.json", "r", encoding="utf-8") as f:
-        catalogue = json.load(f)
+    catalogue = load_fichier("data/inventaire.json")
     obligatoires= ["Baguette magique", "Robe de sorcier", "Manuel de potions"]
     restants = obligatoires[:]
     inventaire = personnage["Inventaire"]
@@ -116,9 +112,3 @@ def lancer_chapitre_1():
     acheter_fournitures(joueur)
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard...\n")
     return joueur
-
-
-
-
-
-
