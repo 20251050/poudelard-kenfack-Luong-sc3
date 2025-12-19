@@ -31,8 +31,8 @@ def demander_choix(message, option) :
         choix = input("Voulez-vous continuer ?\n 1. Oui\n 2. Non\n Votre choix : ")
     if choix == "Oui" or choix == "Non" or choix == "oui" or choix == "non" or choix == 1 or choix == 2:
             choix_valide = True
-        else :
-            choix_valide = False
+    else :
+        choix_valide = False
     return choix
 
 choix = demander_choix("Voulez-vous continuer ?", ["Oui", "Non"])
