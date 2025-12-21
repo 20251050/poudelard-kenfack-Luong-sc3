@@ -61,9 +61,9 @@ def acheter_fournitures(personnage):
             inventaire.append(item)
             print(f"Vous avez acheté : {item} (-{prix} galions).")
             print(f"Il vous reste {argent} galions.")
-            if item in restants:
-                index = restants.index(item)
-                del restants[index]
+        if item in restants:
+           index = restants.index(item)
+           del restants[index]
     print("\nTous les objets obligatoires ont été achetés !\n Il est temps de choisir votre animal de compagnie !")
     print(f"Vous avez {argent} galions.")
     animaux = {"1": ("Chouette", 20),"2": ("Chat", 15),"3": ("Rat", 10),"4": ("Crapaud", 5)}
