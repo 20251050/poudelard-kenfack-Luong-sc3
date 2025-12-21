@@ -3,7 +3,7 @@ from utils.input_utils import demander_texte,demander_nombre,load_fichier
 
 def introduction():
     print ("BIENVENUE A L'ECOLE DES SORCIERS, QUE L'AVENTURE COMMENCE ! ")
-    input()
+
 
 def creer_personnage ():
     nom = demander_texte ("Entrez le nom de votre personnage : ")
@@ -45,8 +45,6 @@ def rencontrer_hagrid(personnage):
         print("'Bonne décision ! Le Chemin de Traverse t'attend.'")
     else:
         print("Hagrid insiste gentiment et vous entraîne quand même avec lui!")
-
-
 
 def acheter_fournitures(personnage):
     catalogue = load_fichier("data/inventaire.json")
@@ -102,7 +100,6 @@ def acheter_fournitures(personnage):
     personnage["Inventaire"] = inventaire
     personnage["Argent"] = argent
     afficher_personnage(personnage)
-
 
 def lancer_chapitre_1():
     introduction()

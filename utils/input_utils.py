@@ -40,9 +40,8 @@ def demander_nombre(message, min_val=None, max_val=None):
 def demander_choix(message, options) :
     print(message)
     for i in range(len(options)) :
-        a = int(len (options))
         print(i+1,". ", options[i])
-        choix = demander_nombre("Votre choix : ",1,int(a))
+    choix = demander_nombre("Votre choix : ",1, len(options))
     return choix
 
 import json

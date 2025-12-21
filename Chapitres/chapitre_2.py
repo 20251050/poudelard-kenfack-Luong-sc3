@@ -1,8 +1,11 @@
-from utils.input_utils import demander_nombre
+from univers.personnage import afficher_personnage
+from utils.input_utils import demander_nombre,load_fichier
 from univers.maison import repartition_maison
 def rencontrer_amis (joueur):
     D = joueur["Attributs"]
-    avant = D[:]
+    avant = {}
+    for cle in D:
+        avant[cle] = D[cle]
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord...\n")
     input()
     print("Un garçon roux entre dans votre compartiment, l’air amical.")
@@ -85,21 +88,31 @@ def ceremonie_repartition(joueur):
 
 def installation_salle_commune(joueur):
     print("Vous suivez les préfets à travers les couloirs du château...\n")
-
-    # Ouverture du fichier JSON
-    with open("maisons.json", "r", encoding="utf-8") as fichier:
-        maisons = json.load(fichier)
-
+    chemin_fichier="../data/maisons.json"
+    maisons =load_fichier (chemin_fichier)
     maison_joueur = joueur["Maison"]
     infos_maison = maisons[maison_joueur]
-
-    # Récupération des informations
     emoji = infos_maison["emoji"]
     description = infos_maison["description"]
     message = infos_maison["message_installation"]
     couleurs = infos_maison["couleurs"]
-
-    # Affichage narratif
     print(emoji, description)
     print(message)
     print("Les couleurs de votre maison :", ", ".join(couleurs))
+
+def lancer_chapitre_2 (personnage):
+    rencontrer_amis(personnage)
+    mot_de_bienvenue()
+    ceremonie_repartition(personnage)
+    installation_salle_commune(personnage)
+    afficher_personnage(personnage)
+    print ("Cette étape est terminée! Quelque chose de mieux vous attend ")
+
+
+
+
+
+
+
+
+
