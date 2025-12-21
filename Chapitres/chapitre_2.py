@@ -5,7 +5,9 @@ from utils.input_utils import demander_nombre
 from univers.maison import repartition_maison
 def rencontrer_amis (joueur):
     D = joueur["Attributs"]
-    avant = D[:]
+    avant = {}
+    for cle in D:
+        avant[cle] = D[cle]
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord...\n")
     input()
     print("Un garçon roux entre dans votre compartiment, l’air amical.\n — Salut ! Moi c’est Ron Weasley. Tu veux bien qu’on s’assoie ensemble ?\n Que répondez-vous ?\n 1. Bien sûr, assieds-toi !\n 2. Désolé, je préfère voyager seul.")
