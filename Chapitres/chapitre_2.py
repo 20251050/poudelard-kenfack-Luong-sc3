@@ -60,7 +60,7 @@ def ceremonie_repartition(joueur):
 def installation_salle_commune(joueur):
     print("Vous suivez les préfets à travers les couloirs du château...\n")
 
-    with open("maisons.json", "r", encoding="utf-8") as fichier:
+    with open("data/maisons.json", "r", encoding="utf-8") as fichier:
         maisons = json.load(fichier)
 
     maison_joueur = joueur["Maison"]
