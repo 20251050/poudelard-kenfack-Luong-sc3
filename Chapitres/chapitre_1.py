@@ -1,9 +1,10 @@
 from univers.personnage import initialiser_personnage, afficher_personnage
-from utils.input_utils import demander_texte,demander_nombre,load_fichier
+from utils.input_utils import demander_texte,demander_nombre,load_fichier,demander_choix
 
 def introduction():
     print ("BIENVENUE A L'ECOLE DES SORCIERS, QUE L'AVENTURE COMMENCE ! ")
     input()
+
 
 def creer_personnage ():
     nom = demander_texte ("Entrez le nom de votre personnage : ")
@@ -16,36 +17,24 @@ def creer_personnage ():
     afficher_personnage(joueur)
     return joueur
 
+
 def recevoir_lettre ():
-    print("Une chouette traverse la fenêtre et vous apporte une lettre scelléedu sceau de Poudlard...")
-    print("« Cher élève,")
-    print("Nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard ! »")
-    print("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?")
-    print("1. Oui, bien sûr !")
-    print("2. Non, je préfère rester avec l’oncle Vernon...")
-    choix = demander_nombre("Votre choix : ",1,2)
-    if choix == 2:
-        print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie :")
-        print("« EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! »")
-        print("Le monde magique ne saura jamais que vous existiez... Fin du jeu.")
+    print("Une chouette traverse la fenêtre et vous apporte une lettre scelléedu sceau de Poudlard...\n «Cher élève,\n Nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard !»\n")
+    demander_choix("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?", ["Oui, bien sûr !", "Non, je préfère rester avec l’oncle Vernon..."])
+    if demander_choix == 2:
+        print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie :\n EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison !\n Le monde magique ne saura jamais que vous existiez... Fin du jeu.")
         exit(0)
     else:
-        print("Vous avez accepté la lettre !")
-        print("La magie vous attend… Votre aventure à Poudlard commence maintenant !")
+        print("Vous avez accepté la lettre !\n La magie vous attend… Votre aventure à Poudlard commence maintenant !")
 
 
 def rencontrer_hagrid(personnage):
     print("Hagrid : 'Salut {} ! Je suis venu t’aider à faire tes achats sur le Chemin de Traverse.".format (personnage))
-    print("Voulez-vous suivre Hagrid ?")
-    print("1. Oui")
-    print("2. Non")
-    choix = demander_nombre("Votre choix : ",1,2)
-    if choix == 1:
-        print("Vous acceptez de suivre Hagrid. Il sourit et vous dit :")
-        print("'Bonne décision ! Le Chemin de Traverse t'attend.'")
+    demander_choix("Voulez-vous suivre Hagrid ?", ["Oui", "Non"])
+    if demander_choix == 1:
+        print("Vous acceptez de suivre Hagrid. Il sourit et vous dit :\n 'Bonne décision ! Le Chemin de Traverse t'attend.'")
     else:
         print("Hagrid insiste gentiment et vous entraîne quand même avec lui!")
-
 
 
 def acheter_fournitures(personnage):
@@ -54,8 +43,7 @@ def acheter_fournitures(personnage):
     restants = obligatoires[:]
     inventaire = personnage["Inventaire"]
     argent = 100
-    print("Bienvenue sur le Chemin de Traverse !")
-    print("Catalogue des objets disponibles :")
+    print("Bienvenue sur le Chemin de Traverse !\n \nCatalogue des objets disponibles :")
     for num, (nom, prix) in catalogue.items():
         print(f"{num}. {nom} - {prix} galions")
     print(f"Vous avez {argent} galions.")
@@ -76,15 +64,9 @@ def acheter_fournitures(personnage):
             if item in restants:
                 index = restants.index(item)
                 del restants[index]
-    print("\nTous les objets obligatoires ont été achetés !")
-    print("Il est temps de choisir votre animal de compagnie !")
+    print("\nTous les objets obligatoires ont été achetés !\n Il est temps de choisir votre animal de compagnie !")
     print(f"Vous avez {argent} galions.")
-    animaux = {
-        "1": ("Chouette", 20),
-        "2": ("Chat", 15),
-        "3": ("Rat", 10),
-        "4": ("Crapaud", 5)
-    }
+    animaux = {"1": ("Chouette", 20),"2": ("Chat", 15),"3": ("Rat", 10),"4": ("Crapaud", 5)}
     print("Voici les animaux disponibles :")
     for num, (nom, prix) in animaux.items():
         print(f"{num}. {nom} - {prix} galions")
@@ -101,7 +83,7 @@ def acheter_fournitures(personnage):
     print(f"Vous avez choisi : {animal} (-{prix_animal} galions).")
     personnage["Inventaire"] = inventaire
     personnage["Argent"] = argent
-    afficher_personnage(personnage)
+    return afficher_personnage(personnage)
 
 
 def lancer_chapitre_1():
