@@ -6,17 +6,19 @@ def actualiser_points_maison(maisons,nom_maison,points):
     else:
         print ("la maison est introuvable")
 
-def afficher_maison_gagnante (maisons):
-    L = maisons.values()
-    max = L[0]
-    S = []
-    for val in L :
-        if val > max :
-            max = val
-    for cle in maisons.keys() :
-        if maisons[cle] == max:
-            S.append(cle)
-    return tuple(S)
+def afficher_maison_gagnante(maisons):
+    premiere = True
+
+    for cle in maisons:
+        if premiere:
+            gagnant = cle
+            maximum = maisons[cle]
+            premiere = False
+        elif maisons[cle] > maximum:
+            maximum = maisons[cle]
+            gagnant = cle
+    return gagnant
+
 
 def repartition_maison (joueur,questions) :
     score = {"Gryffondor":0, "Serpentard":0, "Poufsouffle":0, "Serdaigle":0}
@@ -29,11 +31,12 @@ def repartition_maison (joueur,questions) :
         print ("")
         choix = demander_choix (question,reponse)
         c = choix - 1
-        s = score.keys()
+        s = list(score.keys())
         i = s[c]
         score[i] += 3
     print ("Résumé des scores : ")
     for a,b in score.items() :
         print("{} : {}".format (a,b))
-    print ("La maison finale est : ")
-    afficher_maison_gagnante(score)
+    p = afficher_maison_gagnante(score)
+    print ("La maison finale est : ",p)
+    return p
