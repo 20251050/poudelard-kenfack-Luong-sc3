@@ -5,40 +5,43 @@ def demander_texte (message) :
     return texte
 
 def demander_nombre(message, min_val=None, max_val=None):
-    saisie = input(message)
-    if not saisie:
-        print("Veuillez entrer un nombre.".format(min_val, max_val))
-        return demander_nombre(message, min_val, max_val)
-    index = 0
-    signe = 1
-    est_valide = True
-    resultat = 0
-    if saisie[0] == '-':
-        signe = -1
-        index = 1
-    if len(saisie) == index:
-        est_valide = False
-    else:
-        for i in range(index, len(saisie)):
-            if not ('0' <= saisie[i] <= '9'):
+    valide = False
+    nombre = None
+    while not valide:
+        saisie = input(message).strip()
+        if saisie == "":
+            print("Veuillez entrer un nombre.")
+            continue
+        negatif = False
+        i = 0
+        if saisie[0] == '-':
+            negatif = True
+            i = 1
+        est_valide = True
+        for c in saisie[i:]:
+            if c < '0' or c > '9':
                 est_valide = False
-            resultat = resultat * 10 + (ord(saisie[i]) - ord('0'))
-    if not est_valide:
-        return demander_nombre(message, min_val, max_val)
-    nombre = resultat * signe
-    if min_val is not None and nombre < min_val:
-        print("Veuillez entrer un nombre entre {} et {}.".format(min_val, max_val))
-        return demander_nombre(message, min_val, max_val)
-    if max_val is not None and nombre > max_val:
-        print("Veuillez entrer un nombre entre {} et {}.".format(min_val, max_val))
-        return demander_nombre(message, min_val, max_val)
+        if not est_valide:
+            print("Entrée invalide. Veuillez saisir un nombre entier.")
+            continue
+        nombre = 0
+        for c in saisie[i:]:
+            nombre = nombre * 10 + (ord(c) - ord('0'))
+        if negatif:
+            nombre = -nombre
+        if min_val is not None and nombre < min_val:
+            print(f"Le nombre doit être au moins {min_val}.")
+        elif max_val is not None and nombre > max_val:
+            print(f"Le nombre doit être au maximum {max_val}.")
+        else:
+            valide = True
     return nombre
 
-def demander_choix(message, options):
+def demander_choix(message, options) :
     print(message)
-    for i in range(len(options)):
-        print(i+1,'. ',options[i],)
-    choix = demander_nombre("Votre choix : ", 1, len(options))
+    for i in range(len(options)) :
+        print(i+1,". ", options[i])
+    choix = demander_nombre("Votre choix : ",1, len(options))
     return choix
 
 import json
