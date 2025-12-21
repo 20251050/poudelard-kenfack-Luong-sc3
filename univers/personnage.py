@@ -27,9 +27,3 @@ def modifier_argent (joueur,montant) :
 
 def ajouter_objet (joueur,cle,objet):
     joueur[cle].append (str(objet))
-
-
-
-
-
-

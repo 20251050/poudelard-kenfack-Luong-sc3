@@ -37,6 +37,3 @@ def repartition_maison (joueur,questions) :
         print("{} : {}".format (a,b))
     print ("La maison finale est : ")
     afficher_maison_gagnante(score)
-
-
-

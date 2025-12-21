@@ -23,14 +23,12 @@ def apprendre_sorts(joueur, chemin_fichier="../data/sorts.json"):
         joueur["Sortilèges"].append(sort)
         print(f"Tu viens d'apprendre le sortilège : {sort['nom']} ({sort['type']})")
         input("Appuie sur Entrée pour continuer...")
-    print("\nTu as terminé ton apprentissage de base à Poudlard !")
-    print("Voici les sortilèges que tu maîtrises désormais :")
+    print("\nTu as terminé ton apprentissage de base à Poudlard !\n Voici les sortilèges que tu maîtrises désormais :")
     for sort in a_apprendre:
         print(f"- {sort['nom']} ({sort['type']}) : {sort['description']}.")
 
 def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json"):
-    print("Bienvenue au quiz de magie de Poudlard !")
-    print("Réponds correctement aux 4 questions pour faire gagner des points à ta maison.\n")
+    print("Bienvenue au quiz de magie de Poudlard !\n Réponds correctement aux 4 questions pour faire gagner des points à ta maison.\n")
     questions = load_fichier(chemin_fichier)
     questions_tirees = []
     while len(questions_tirees) < 4:
@@ -57,11 +55,3 @@ def lancer_chapitre_3 (personnage, maisons):
      actualiser_points_maison(maisons,personnage["maison"],score)
      afficher_maison_gagnante(maisons)
      afficher_personnage (personnage)
-
-
-
-
-
-
-
-
