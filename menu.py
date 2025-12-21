@@ -27,10 +27,3 @@ def lancer_choix_menu():
 
         else:
             print("Choix invalide. Veuillez entrer 1 ou 2.")
-
-
-
-
-
-
-

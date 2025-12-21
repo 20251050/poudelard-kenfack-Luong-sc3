@@ -55,4 +55,4 @@ def lancer_chapitre_3 (personnage, maisons):
      actualiser_points_maison(maisons,personnage["Maison"],score)
      vainceur = afficher_maison_gagnante(maisons)
      print ("La maison actuellement en tête est : ",vainceur)
-     afficher_personnage (personnage)
+     afficher_personnage(personnage)
