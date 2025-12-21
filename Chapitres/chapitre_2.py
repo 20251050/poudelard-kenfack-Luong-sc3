@@ -1,5 +1,6 @@
 import json
 
+from univers.personnage import afficher_personnage
 from utils.input_utils import demander_nombre
 from univers.maison import repartition_maison
 def rencontrer_amis (joueur):
@@ -71,3 +72,11 @@ def installation_salle_commune(joueur):
     print(emoji, description)
     print(message)
     print("Les couleurs de votre maison :", ", ".join(couleurs))
+
+def lancer_chapitre_2(personnage):
+    rencontrer_amis(personnage)
+    mot_de_bienvenue()
+    ceremonie_repartition(personnage)
+    installation_salle_commune(personnage)
+    afficher_personnage(personnage)
+    print("c'est la fin! Bientôt les cours commencent à Poudlard")
