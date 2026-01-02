@@ -87,7 +87,7 @@ def match_quidditch(joueur, maisons):
     print(f"\nTu joues pour {maison_joueur} en tant qu’Attrapeur")
 
     for tour in range(1, 21):
-        print(f"\n━━━ Tour {tour} ━━━")
+        print(f"\n Tour {tour} ")
 
         tentative_marque(equipe_joueur, equipe_adverse, joueur_est_joueur=True)
         tentative_marque(equipe_adverse, equipe_joueur)
@@ -120,6 +120,6 @@ def match_quidditch(joueur, maisons):
     maisons[gagnant["nom"]] += 500
 
 def lancer_chapitre4_quidditch(joueur, maisons):
-    print("\n⚡ CHAPITRE 4 — ÉPREUVE DE QUIDDITCH ⚡")
+    print("\n CHAPITRE 4 — ÉPREUVE DE QUIDDITCH ")
     match_quidditch(joueur, maisons)
     print("\nFin du Chapitre 4 — Quelle performance incroyable sur le terrain !")
