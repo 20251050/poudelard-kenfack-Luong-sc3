@@ -3,7 +3,6 @@ from Chapitres.chapitre_2 import *
 from Chapitres.chapitre_3 import *
 from utils.input_utils import *
 def afficher_menu_principal():
-    print ("MENU PRINCIPAL")
     choix = demander_choix("MENU PRINCIPAL: ",["Lancer le Chapitre 1 – L’arrivée dans le monde magique","Quitter le jeu"])
     return choix
 

@@ -3,8 +3,7 @@ from utils.input_utils import demander_texte,demander_nombre,load_fichier,demand
 
 def introduction():
     print ("BIENVENUE A L'ECOLE DES SORCIERS, QUE L'AVENTURE COMMENCE ! ")
-    input()
-
+    input("Appuyez sur Entrée pour continuer")
 
 def creer_personnage ():
     nom = demander_texte ("Entrez le nom de votre personnage : ")
@@ -77,7 +76,7 @@ def acheter_fournitures(personnage):
     animal, prix_animal = animaux[choix_animal]
     if prix_animal > argent:
         print("Vous n’avez pas assez d’argent pour cet animal. Vous perdez la partie.")
-        return None
+        exit(0)
     argent -= prix_animal
     inventaire.append(animal)
     print(f"Vous avez choisi : {animal} (-{prix_animal} galions).")

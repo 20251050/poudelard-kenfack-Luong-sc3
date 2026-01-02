@@ -62,19 +62,15 @@ def installation_salle_commune(joueur):
 
     with open("data/maisons.json", "r", encoding="utf-8") as fichier:
         maisons = json.load(fichier)
-
     maison_joueur = joueur["Maison"]
     infos_maison = maisons[maison_joueur]
-
     emoji = infos_maison["emoji"]
     description = infos_maison["description"]
     message = infos_maison["message_installation"]
     couleurs = infos_maison["couleurs"]
-
     print(emoji, description)
     print(message)
     print("Les couleurs de votre maison :", ", ".join(couleurs))
-
 def lancer_chapitre_2(personnage):
     rencontrer_amis(personnage)
     mot_de_bienvenue()
