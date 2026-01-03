@@ -96,6 +96,9 @@ Semaine 1 : Fondations et Chapitre 1 (9-15 décembre 2025)
   - Premiers problèmes avec Git (commits, push, pull)
   - Apprentissage de la collaboration via GitHub
   - Désaccords sur la structure et l'implémentation de certaines fonctions
+  - Anticiper tous les cas où le programme peut planter.
+  - Le débogage et le test pour que tout fonctionne ensemble.
+  - Savoir comment organiser les informations des joueurs, équipes, maisons dans des fichiers JSON ou dictionnaires.
 
 Semaine 2 : Module Maison et Chapitre 2 (16-22 décembre 2025)
 - Objectifs : Développement du système de maisons et du deuxième chapitre
