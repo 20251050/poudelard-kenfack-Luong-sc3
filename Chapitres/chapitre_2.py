@@ -1,7 +1,6 @@
-import json
 
 from univers.personnage import afficher_personnage
-from utils.input_utils import demander_nombre
+from utils.input_utils import demander_nombre,load_fichier
 from univers.maison import repartition_maison
 def rencontrer_amis (joueur):
     D = joueur["Attributs"]
@@ -40,14 +39,14 @@ def rencontrer_amis (joueur):
     for cle in D.keys () :
         if D[cle] != avant[cle]:
             attributs_modifies[cle] = D[cle]
-    print("Tes attributs mis à jour :", attributs_modifies)
+    print("\nTes attributs mis à jour :", attributs_modifies)
 
 def mot_de_bienvenue():
-    print("— Bienvenue à Poudlard. Que cette année soit riche en découvertes.\n — Que le festin commence !")
+    print("\n— Bienvenue à Poudlard. Que cette année soit riche en découvertes.\n — Que le festin commence !")
     input()
 
 def ceremonie_repartition(joueur):
-    print("La cérémonie de répartition commence dans la Grande Salle...\n Le Choixpeau magique t’observe longuement avant de poser ses questions :\n")
+    print("\nLa cérémonie de répartition commence dans la Grande Salle...\n Le Choixpeau magique t’observe longuement avant de poser ses questions :\n")
     questions = [("Tu vois un ami en danger. Que fais-tu ?",["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l’aide", "Je reste calme et j’observe"],["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]),
                 ("Quel trait te décrit le mieux ?",["Courageux et loyal", "Rusé et ambitieux", "Patient et travailleur", "Intelligent et curieux"],["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]),
                 ("Face à un défi difficile, tu...",["Fonces sans hésiter", "Cherches la meilleure stratégie", "Comptes sur tes amis", "Analyses le problème"],["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"])]
@@ -56,29 +55,24 @@ def ceremonie_repartition(joueur):
     joueur["Maison"] = maison
     print(f"\nLe Choixpeau s’exclame : {maison} !!!")
     print(f"Tu rejoins les élèves de {maison} sous les acclamations !")
+    input ("Appuyer sur Entrée pour continuer")
 
 def installation_salle_commune(joueur):
-    print("Vous suivez les préfets à travers les couloirs du château...\n")
-
-    with open("data/maisons.json", "r", encoding="utf-8") as fichier:
-        maisons = json.load(fichier)
-
+    print("\nVous suivez les préfets à travers les couloirs du château...\n")
+    maisons =load_fichier("data/maisons.json")
     maison_joueur = joueur["Maison"]
     infos_maison = maisons[maison_joueur]
-
     emoji = infos_maison["emoji"]
     description = infos_maison["description"]
     message = infos_maison["message_installation"]
     couleurs = infos_maison["couleurs"]
-
-    print(emoji, description)
+    print("\n",emoji, description)
     print(message)
-    print("Les couleurs de votre maison :", ", ".join(couleurs))
-
+    print("\n Les couleurs de votre maison :", ", ".join(couleurs))
 def lancer_chapitre_2(personnage):
     rencontrer_amis(personnage)
     mot_de_bienvenue()
     ceremonie_repartition(personnage)
     installation_salle_commune(personnage)
     afficher_personnage(personnage)
-    print("c'est la fin! Bientôt les cours commencent à Poudlard")
+    print("\n c'est la fin! Bientôt les cours commencent à Poudlard")

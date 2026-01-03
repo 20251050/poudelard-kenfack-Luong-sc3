@@ -2,7 +2,6 @@ import random
 from utils.input_utils import demander_texte,load_fichier
 from univers.maison import actualiser_points_maison,afficher_maison_gagnante
 from univers.personnage import afficher_personnage
-
 def apprendre_sorts(joueur, chemin_fichier="data/sorts.json"):
     print("Tu commences tes cours de magie à Poudlard...")
     liste_sorts =load_fichier(chemin_fichier)
@@ -55,4 +54,4 @@ def lancer_chapitre_3 (personnage, maisons):
      actualiser_points_maison(maisons,personnage["Maison"],score)
      vainceur = afficher_maison_gagnante(maisons)
      print ("La maison actuellement en tête est : ",vainceur)
-     afficher_personnage(personnage)
+     afficher_personnage (personnage)

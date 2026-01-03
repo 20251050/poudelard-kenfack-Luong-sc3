@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4aaf507c-7db7-4ab9-9eea-00238ee3064a" name="Changes" comment="Chapitre 4 modifié">
+    <list default="true" id="4aaf507c-7db7-4ab9-9eea-00238ee3064a" name="Changes" comment="ENFIN">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/univers/maison.py" beforeDir="false" afterPath="$PROJECT_DIR$/univers/maison.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -28,12 +39,12 @@
     &quot;assignee&quot;: &quot;20251050&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/20251050/poudelard-kenfack-Luong-sc3.git&quot;,
-    &quot;accountId&quot;: &quot;60cd9d18-76a6-4c2a-b41e-0e52336f3275&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/20251050/poudelard-kenfack-Luong-sc3.git",
+    "accountId": "feb28fb0-e422-41ca-a0ab-7aeb19d581d1"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -48,10 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.chapitre_1.executor&quot;: &quot;Run&quot;,
     &quot;Python.chapitre_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chapitre_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chapitre_4.executor&quot;: &quot;Run&quot;,
     &quot;Python.chapitre_5_extension.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.maison.executor&quot;: &quot;Run&quot;,
@@ -109,7 +117,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
         <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
@@ -124,10 +131,8 @@
       <workItem from="1764921270819" duration="4586000" />
       <workItem from="1764926063077" duration="39728000" />
       <workItem from="1766340340723" duration="1015000" />
-      <workItem from="1766341392757" duration="1241000" />
-      <workItem from="1766350815641" duration="4323000" />
-      <workItem from="1767380715964" duration="5330000" />
-      <workItem from="1767392479354" duration="4654000" />
+      <workItem from="1766341392757" duration="405000" />
+      <workItem from="1767393918821" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="C'est juste pour l'essai">
       <option name="closed" value="true" />
@@ -169,63 +174,55 @@
       <option name="project" value="LOCAL" />
       <updated>1766341289842</updated>
     </task>
-    <task id="LOCAL-00006" summary="workspace">
+    <task id="LOCAL-00006" summary="rectification chapitre 2">
       <option name="closed" value="true" />
-      <created>1766342020111</created>
+      <created>1766352001162</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1766342020111</updated>
+      <updated>1766352001162</updated>
     </task>
-    <task id="LOCAL-00007" summary="workspace">
+    <task id="LOCAL-00007" summary="rectification chapitre 1">
       <option name="closed" value="true" />
-      <created>1766350885373</created>
+      <created>1766352471397</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1766350885373</updated>
+      <updated>1766352471397</updated>
     </task>
-    <task id="LOCAL-00008" summary="workspace">
+    <task id="LOCAL-00008" summary="rectification chapitre 2">
       <option name="closed" value="true" />
-      <created>1766351248535</created>
+      <created>1766353329897</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1766351248535</updated>
+      <updated>1766353329897</updated>
     </task>
-    <task id="LOCAL-00009" summary="CHAPITRE 3 TERMINé">
+    <task id="LOCAL-00009" summary="CHAPITRE3 TERMINE">
       <option name="closed" value="true" />
-      <created>1766357725168</created>
+      <created>1766357469530</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1766357725168</updated>
+      <updated>1766357469530</updated>
     </task>
-    <task id="LOCAL-00010" summary="Chapitre 4 et menu terminé avec quelques modifications du chapitre 1 et 3">
+    <task id="LOCAL-00010" summary="CHAPITRE3 TERMINE">
       <option name="closed" value="true" />
-      <created>1767384646709</created>
+      <created>1766357905561</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1767384646709</updated>
+      <updated>1766357905561</updated>
     </task>
-    <task id="LOCAL-00011" summary="Chapitre 4 terminé">
+    <task id="LOCAL-00011" summary="ENFIN">
       <option name="closed" value="true" />
-      <created>1767394458367</created>
+      <created>1767394475837</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1767394458367</updated>
+      <updated>1767394475837</updated>
     </task>
-    <task id="LOCAL-00012" summary="Chapitre 4 modifié">
-      <option name="closed" value="true" />
-      <created>1767397001713</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1767397001713</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,35 +233,21 @@
     <MESSAGE value="ihiuh" />
     <MESSAGE value="voici les programmes" />
     <MESSAGE value="voici les 3 premiers chapitres après modification" />
-    <MESSAGE value="workspace" />
-    <MESSAGE value="CHAPITRE 3 TERMINé" />
-    <MESSAGE value="Chapitre 4 et menu terminé avec quelques modifications du chapitre 1 et 3" />
-    <MESSAGE value="Chapitre 4 terminé" />
-    <MESSAGE value="Chapitre 4 modifié" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapitre 4 modifié" />
-    <option name="LAST_CHUNK_COMMIT_MESSAGE" value="CHAPITRE 3 TERMINé" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Chapitres/chapitre_1.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="rectification chapitre 1" />
+    <MESSAGE value="rectification chapitre 2" />
+    <MESSAGE value="CHAPITRE3 TERMINE" />
+    <MESSAGE value="ENFIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="ENFIN" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_4.coverage" NAME="chapitre_4 Coverage Results" MODIFIED="1767394531096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$personnage.coverage" NAME="personnage Coverage Results" MODIFIED="1764952683670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/univers" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$input_utils.coverage" NAME="input_utils Coverage Results" MODIFIED="1765526403357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_5_extension.coverage" NAME="chapitre_5_extension Coverage Results" MODIFIED="1766340632879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_1.coverage" NAME="chapitre_1 Coverage Results" MODIFIED="1767394526607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_3.coverage" NAME="chapitre_3 Coverage Results" MODIFIED="1767394533043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$main.coverage" NAME="main Coverage Results" MODIFIED="1766131322821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$personnage.coverage" NAME="personnage Coverage Results" MODIFIED="1764952683670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/univers" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$input_utils.coverage" NAME="input_utils Coverage Results" MODIFIED="1766130675381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_3.coverage" NAME="chapitre_3 Coverage Results" MODIFIED="1766131293060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_1.coverage" NAME="chapitre_1 Coverage Results" MODIFIED="1766135223952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$menu.coverage" NAME="menu Coverage Results" MODIFIED="1766133035488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_2.coverage" NAME="chapitre_2 Coverage Results" MODIFIED="1766131510236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
     <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$maison.coverage" NAME="maison Coverage Results" MODIFIED="1765029065020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/univers" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$chapitre_2.coverage" NAME="chapitre_2 Coverage Results" MODIFIED="1767394529300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chapitres" />
-    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$menu.coverage" NAME="menu Coverage Results" MODIFIED="1767394519136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$main.coverage" NAME="main Coverage Results" MODIFIED="1766358927142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
