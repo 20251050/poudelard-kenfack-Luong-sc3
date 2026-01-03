@@ -2,25 +2,23 @@ import random
 from utils.input_utils import load_fichier
 from univers.maison import actualiser_points_maison
 
-def creer_equipe(maison, equipe_data, est_joueur=False, joueur=None):
+def creer_equipe(maison,equipe_data, est_joueur=False, joueur=None):
+    s = equipe_data[maison]
     equipe = {
         'nom': maison,
         'score': 0,
         'a_marque': 0,
         'a_stoppe': 0,
         'attrape_vifdor': False,
-        'joueurs': []
+        'joueurs': s["joueurs"]
     }
-
     if est_joueur and joueur is not None:
         nouveaux_joueurs = []
         joueur_nom = f"{joueur['Prenom']} {joueur['Nom']} (Attrapeur)"
         nouveaux_joueurs.append(joueur_nom)
-
         for j in equipe["joueurs"]:
             if joueur["Prenom"] not in j and joueur["Nom"] not in j:
                 nouveaux_joueurs.append(j)
-
         equipe["joueurs"] = nouveaux_joueurs
 
     return equipe
