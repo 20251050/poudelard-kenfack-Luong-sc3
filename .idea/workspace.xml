@@ -39,12 +39,12 @@
     &quot;assignee&quot;: &quot;20251050&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/20251050/poudelard-kenfack-Luong-sc3.git",
-    "accountId": "feb28fb0-e422-41ca-a0ab-7aeb19d581d1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/20251050/poudelard-kenfack-Luong-sc3.git&quot;,
+    &quot;accountId&quot;: &quot;feb28fb0-e422-41ca-a0ab-7aeb19d581d1&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
