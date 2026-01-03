@@ -1,16 +1,16 @@
 import random
 from utils.input_utils import load_fichier
-from univers.maison import actualiser_points_maison
+from univers.maison import actualiser_points_maison,afficher_maison_gagnante
+from univers.personnage import afficher_personnage
 
 def creer_equipe(maison,equipe_data, est_joueur=False, joueur=None):
-    s = equipe_data[maison]
     equipe = {
         'nom': maison,
         'score': 0,
         'a_marque': 0,
         'a_stoppe': 0,
         'attrape_vifdor': False,
-        'joueurs': s["joueurs"]
+        'joueurs': list(equipe_data)
     }
     if est_joueur and joueur is not None:
         nouveaux_joueurs = []
@@ -61,11 +61,14 @@ def afficher_equipe(maison, equipe):
         print(f"- {joueur}")
 
 def match_quidditch(joueur, maisons):
-    equipes_data =load_fichier("data/equipes_quidditch.json")
+    equipes =load_fichier("data/equipes_quidditch.json")
     maison_joueur = joueur["Maison"]
-    maison_adverse = random.choice([m for m in equipes_data if m != maison_joueur])
-    equipe_joueur = creer_equipe(maison_joueur,equipes_data[maison_joueur],est_joueur=True,joueur=joueur)
-    equipe_adverse = creer_equipe(maison_adverse,equipes_data[maison_adverse])
+    maisons_disponibles = list(equipes.keys())
+    index_maison_joueur = maisons_disponibles.index(maison_joueur)
+    del maisons_disponibles[index_maison_joueur]
+    maison_adverse = random.choice(maisons_disponibles)
+    equipe_joueur = creer_equipe(maison_joueur,equipes[maison_joueur]["joueurs"],est_joueur=True,joueur=joueur)
+    equipe_adverse = creer_equipe(maison_adverse,equipes[maison_adverse]["joueurs"])
     print(f"\nMatch de Quidditch : {maison_joueur} vs {maison_adverse} !")
     afficher_equipe(maison_joueur, equipe_joueur)
     afficher_equipe(maison_adverse, equipe_adverse)
@@ -97,6 +100,9 @@ def match_quidditch(joueur, maisons):
     actualiser_points_maison(maisons, maisons[gagnant["nom"]], 500)
 
 def lancer_chapitre4_quidditch(joueur, maisons):
-    print("\n⚡ CHAPITRE 4 — ÉPREUVE DE QUIDDITCH ⚡")
+    print("\n CHAPITRE 4 — ÉPREUVE DE QUIDDITCH ")
     match_quidditch(joueur, maisons)
     print("\nFin du Chapitre 4 — Quelle performance incroyable sur le terrain !")
+    g = afficher_maison_gagnante(maisons)
+    print ("La maison qui remporte le championnat est ",g)
+    afficher_personnage(joueur)
