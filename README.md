@@ -151,6 +151,22 @@ Gestion des interactions
 - Messages d'erreur clairs et informatifs
 - Expérience utilisateur fluide avec pauses narratives
 
+Répartition des tâches
+
+Kevin :
+- input.utils
+- Chapitre 2
+- chapitre 4
+- menu
+- Readme
+
+Thérésine : 
+- chapitre 1
+- chapitre 3
+- maison
+- personnage
+- main
+
 
 Contrôle, Tests et Validation
 
