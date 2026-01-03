@@ -20,8 +20,8 @@ def creer_personnage ():
 
 def recevoir_lettre ():
     print("Une chouette traverse la fenêtre et vous apporte une lettre scelléedu sceau de Poudlard...\n «Cher élève,\n Nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard !»\n")
-    demander_choix("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?", ["Oui, bien sûr !", "Non, je préfère rester avec l’oncle Vernon..."])
-    if demander_choix == 2:
+    choix =demander_choix("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?", ["Oui, bien sûr !", "Non, je préfère rester avec l’oncle Vernon..."])
+    if choix == 2:
         print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie :\n EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison !\n Le monde magique ne saura jamais que vous existiez... Fin du jeu.")
         exit(0)
     else:
@@ -30,11 +30,12 @@ def recevoir_lettre ():
 
 def rencontrer_hagrid(personnage):
     print("Hagrid : 'Salut {} ! Je suis venu t’aider à faire tes achats sur le Chemin de Traverse.".format (personnage))
-    demander_choix("Voulez-vous suivre Hagrid ?", ["Oui", "Non"])
-    if demander_choix == 1:
+    choix = demander_choix("Voulez-vous suivre Hagrid ?", ["Oui", "Non"])
+    if choix == 1:
         print("Vous acceptez de suivre Hagrid. Il sourit et vous dit :\n 'Bonne décision ! Le Chemin de Traverse t'attend.'")
+        input ("Appuyer sur Entrée pour continuer\n")
     else:
-        print("Hagrid insiste gentiment et vous entraîne quand même avec lui!")
+        print("Hagrid insiste gentiment et vous entraîne quand même avec lui!\n")
 
 
 def acheter_fournitures(personnage):
@@ -56,7 +57,7 @@ def acheter_fournitures(personnage):
             item, prix = catalogue[choix]
             if prix > argent:
                 print("Vous n’avez pas assez d’argent... Vous perdez la partie.")
-                return None
+                exit(0)
             argent -= prix
             inventaire.append(item)
             print(f"Vous avez acheté : {item} (-{prix} galions).")
@@ -67,22 +68,23 @@ def acheter_fournitures(personnage):
     print("\nTous les objets obligatoires ont été achetés !\n Il est temps de choisir votre animal de compagnie !")
     print(f"Vous avez {argent} galions.")
     animaux = {"1": ("Chouette", 20),"2": ("Chat", 15),"3": ("Rat", 10),"4": ("Crapaud", 5)}
-    print("Voici les animaux disponibles :")
+    print("\nVoici les animaux disponibles :")
     for num, (nom, prix) in animaux.items():
         print(f"{num}. {nom} - {prix} galions")
-    choix_animal = input("Quel animal voulez-vous ? Votre choix : ")
+    choix_animal = input("\nQuel animal voulez-vous ? Votre choix : ")
     while choix_animal not in animaux:
         print("Choix invalide. Entrez un numéro entre 1 et 4.")
         choix_animal = input("Votre choix : ")
     animal, prix_animal = animaux[choix_animal]
     if prix_animal > argent:
-        print("Vous n’avez pas assez d’argent pour cet animal. Vous perdez la partie.")
-        exit(0)
-    argent -= prix_animal
-    inventaire.append(animal)
-    print(f"Vous avez choisi : {animal} (-{prix_animal} galions).")
+        print("Vous n’avez pas assez d’argent pour cet animal.")
+    else :
+        argent -= prix_animal
+        inventaire.append(animal)
+        print(f"\nVous avez choisi : {animal} (-{prix_animal} galions).")
     personnage["Inventaire"] = inventaire
     personnage["Argent"] = argent
+    print()
     return afficher_personnage(personnage)
 
 
