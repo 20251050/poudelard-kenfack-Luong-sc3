@@ -46,7 +46,6 @@ def quiz_magie(joueur, chemin_fichier="data/quiz_magie.json"):
             print(f"Mauvaise réponse. La bonne réponse était : {q['reponse']}\n")
         numero_question += 1
     print(f"Score obtenu : {score_quiz} points")
-    joueur["Score"] = score_quiz
     return score_quiz
 
 def lancer_chapitre_3 (personnage, maisons):
@@ -56,3 +55,4 @@ def lancer_chapitre_3 (personnage, maisons):
      vainceur = afficher_maison_gagnante(maisons)
      print ("La maison actuellement en tête est : ",vainceur)
      afficher_personnage (personnage)
+     input ("Appuyer sur Entrée pour continuer")
