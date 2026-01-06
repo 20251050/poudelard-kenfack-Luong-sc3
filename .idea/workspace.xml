@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4aaf507c-7db7-4ab9-9eea-00238ee3064a" name="Changes" comment="">
+    <list default="true" id="4aaf507c-7db7-4ab9-9eea-00238ee3064a" name="Changes" comment="FIN">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapitres/chapitre_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapitres/chapitre_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -116,7 +114,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -261,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767477661797</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="FIN">
+      <option name="closed" value="true" />
+      <created>1767525117380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1767525117380</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +285,8 @@
     <MESSAGE value="changes" />
     <MESSAGE value="readme chap 2 et menu" />
     <MESSAGE value="ajout des difficultés dans le readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout des difficultés dans le readme" />
+    <MESSAGE value="FIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIN" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/poudelard_kenfack_Luong_sc3$personnage.coverage" NAME="personnage Coverage Results" MODIFIED="1764952683670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/univers" />
